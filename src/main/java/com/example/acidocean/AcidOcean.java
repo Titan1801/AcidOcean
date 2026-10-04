@@ -12,7 +12,7 @@ import net.minecraft.server.MinecraftServer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.particle.EntityEffectParticleEffect;
+import net.minecraft.particle.TintedParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.server.command.CommandManager;
@@ -67,7 +67,7 @@ public class AcidOcean implements ModInitializer {
 
                 // Green swirling (spiral) particles around the player
                 world.spawnParticles(
-                        EntityEffectParticleEffect.create(ParticleTypes.ENTITY_EFFECT, 0.15f, 0.9f, 0.2f),
+                        TintedParticleEffect.create(ParticleTypes.ENTITY_EFFECT, 0.15f, 0.9f, 0.2f),
                         player.getX(), player.getY() + 1.0, player.getZ(),
                         20, 0.5, 0.6, 0.5, 0.05);
                 player.damage(world, world.getDamageSources().magic(), config.damage);
