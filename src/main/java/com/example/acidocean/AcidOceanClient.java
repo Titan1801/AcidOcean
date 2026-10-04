@@ -30,7 +30,7 @@ public class AcidOceanClient implements ClientModInitializer {
             if (mc.player == null || mc.world == null) return;
             if (!mc.player.isSubmergedInWater()) return;
             if (!mc.world.getBiome(mc.player.getBlockPos()).isIn(BiomeTags.IS_OCEAN)) return;
-            context.fill(0, 0, context.getScaledWindowWidth(), context.getScaledWindowHeight(), 0xC000E020);
+            context.fill(0, 0, context.getScaledWindowWidth(), context.getScaledWindowHeight(), 0x5500E020);
         });
     }
 }
